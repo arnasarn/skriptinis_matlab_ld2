@@ -18,8 +18,8 @@ amplitude = 6;
 daznis = 2;
 triuksmo_amplitude = 1.5;
 t = 0:0.005:2;
-signalas = amplitude*cos(2*pi*daznis*t);
 triuksmas = triuksmo_amplitude * randn(size(t));
+signalas = amplitude*cos(2*pi*daznis*t) + triuksmas;
 
 u1 = 4;
 u2 = 2;
