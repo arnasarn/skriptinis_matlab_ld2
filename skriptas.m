@@ -30,6 +30,13 @@ size(signalas_filtruotas);
 min(signalas_filtruotas);
 max(signalas_filtruotas);
 
+clear
+clc
+A = input("Įveskite 12 narių \n");
+disp("Vektorius B yra: ")
+B = [A(1,10:end) A(1,1:9)];
+disp(B)
+
 
 
 

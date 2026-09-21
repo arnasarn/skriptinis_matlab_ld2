@@ -23,9 +23,18 @@ triuksmas = triuksmo_amplitude * randn(size(t));
 
 u1 = 4;
 u2 = 2;
-disp(signalas(signalas > u1));
-signalas(abs(signalas) < u2) = 0;
-size(signalas)
+signalas_filtruotas = signalas(signalas > u1);
+signalas_filtruotas(abs(signalas_filtruotas) < u2) = 0;
+size(signalas);
+size(signalas_filtruotas);
+min(signalas_filtruotas);
+max(signalas_filtruotas);
+
+clear
+clc
+A = input("Įveskite 12 narių\n")
+disp("Vektorius B yra:\n")
+B = [A(1,10:A(1, end)), A(1,1)]
 
 
 
