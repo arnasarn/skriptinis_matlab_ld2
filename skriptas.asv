@@ -1,0 +1,32 @@
+clear
+clc
+eilute = 5:2:34;
+eksponentes = exp(eilute);
+dalybos = eilute./eksponentes;
+stulpelis = reshape(dalybos, [length(dalybos), 1]);
+
+clear
+clc
+A = [pi/2 3*1i; log10(2) 2*pi];
+B = [exp(A(1, 1)) exp(A(1,2))];
+A = [A; B];
+eiluciu_sumos = [sum(A, 2)];
+
+clear
+clc
+amplitude = 6;
+daznis = 2;
+triuksmo_amplitude = 1.5;
+t = 0:0.005:2;
+signalas = amplitude*cos(2*pi*daznis*t);
+triuksmas = triuksmo_amplitude * randn(size(t));
+
+u1 = 4;
+u2 = 2;
+disp(signalas(signalas > u1));
+signalas(abs(signalas) < u2) = 0;
+size(signalas)
+
+
+
+
